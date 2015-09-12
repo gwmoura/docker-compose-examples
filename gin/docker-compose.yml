@@ -1,0 +1,7 @@
+web:
+  build: .
+  command: go run app.go
+  volumes:
+    - ./src/:/src/
+  ports:
+    - "4000:4000"

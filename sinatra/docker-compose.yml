@@ -1,0 +1,11 @@
+db:
+  image: postgres
+web:
+  build: .
+  command: bundle exec ruby app.rb
+  volumes:
+    - ./src/:/src/
+  ports:
+    - "3000:3000"
+  links:
+    - db
